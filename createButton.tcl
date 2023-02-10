@@ -1,18 +1,18 @@
 workspace userbutton set Open_GDSII
 
-set script_path "C:/Users/KhalidTeama/AppData/Roaming/Tanner EDA/scripts/startup.ledit"
+#Set path to L-Edit's startup macros
+set appdata_path [string map {"\\" /} $::env(APPDATA)]
+set script_path "$appdata_path/Tanner EDA/scripts/startup.ledit"
+puts $script_path
 
 proc Open_GDSII {} {
-    set designsList [database designs]
+    catch {
+        set designsList [database designs]
 
-    if {[lsearch $designsList tmpdesign] >= 0} { 
-	database close -file tmpdesign
-	}
-    #set script_path [ file dirname [ file normalize [ info script ] ] ]
-    #set infoscript [info script] 
-    #puts $infoscript 
-    #puts "Executing open GDSII" 
-    #puts "$script_path"
+        if {[lsearch $designsList tmpdesign] > 0} { 
+        database close -file tmpdesign
+        }
+    }
     executemacro -file "$::script_path/Open_GDSII.cpp"
 }
 
