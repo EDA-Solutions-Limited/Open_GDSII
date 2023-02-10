@@ -5,7 +5,6 @@
   <a href="https://github.com/EDA-Solutions-Limited/Open_GDSII"><strong>Explore the project »</strong></a>
   <br />
   <br />
-  ·
   <a href="https://github.com/EDA-Solutions-Limited/launch_putty/issues">Report Bug</a>
   ·
   <a href="https://github.com/EDA-Solutions-Limited/launch_putty/issues">Request Feature</a>
@@ -30,7 +29,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#making-changes">Making changes</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -47,7 +45,7 @@ Very simple implementation of a pair of scripts to import a GDSII from a fixed l
 ### Built With
 
 * Tcl
-* C
+* C++
 
 
 <!-- GETTING STARTED -->
